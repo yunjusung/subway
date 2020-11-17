@@ -1,0 +1,172 @@
+main {
+    position: relative;
+    width: 100%;
+    background-color: #f2f2f2;
+    padding-top: 175px;
+}
+
+main > #sub-header {
+    position: absolute;
+    top: 175px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    /* 배경값 없음 */
+    background-color: transparent;
+    z-index: 10;
+    /* border: 1px solid black; */
+}
+
+main > #sub-header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+    display: inline-block;
+}
+
+main > #sub-header > .content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+main > #sub-header .logo {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+main > #sub-header .sub-menu {
+    margin: 0 auto;
+}
+
+main > #sub-header .sub-menu > ul {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+main > #sub-header .sub-menu > ul > li {
+    height: 100%;
+}
+
+main > #sub-header .sub-menu > ul > li::after {
+    content: '';
+    width: 4px;
+    height: 4px;
+    display: inline-block;
+    margin: 0 20px 4px;
+    border-radius: 50px;
+    background-color: #dddddd;
+    opacity: 1;
+}
+
+main > #sub-header .sub-menu > ul > li:last-child::after {
+    display: none;
+}
+
+main > #sub-header .sub-menu > ul > li > a {
+    position: relative;
+    height: 100%;
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 60px;
+}
+
+main > #sub-header .sub-menu > ul > li.active > a {
+    display: inline-block;
+    font-weight: bold;
+    color: #ffce32;
+}
+
+main > #sub-header .sub-menu > ul > li.active > a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    display: inline-block;
+    background-color: #ffce32;
+}
+
+main > #sub-header a.top {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 26px;
+    display: none;
+    transform: translateY(-50%);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #dddddd;
+    padding-top: 10px;
+}
+
+main > #sub-header a.top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 5px;
+    display: inline-block;
+    background-image: url(../image/icon/icon_arr_top.png);
+    /* 반복방지 */
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 9px;
+}
+
+main > #banner {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    background-color: #e85a1c;
+    text-align: center;
+    overflow: hidden;
+}
+
+main > #banner > h2 {
+    position: relative;
+    font-size: 70px;
+    color: #ffffff;
+    padding: 110px 0 20px;
+    top: 100px;
+    opacity: 0;
+    z-index: 2;
+}
+
+main > #banner > p {
+    position: relative;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 26px;
+    top: 100px;
+    opacity: 0;
+    z-index: 2;
+}
+
+main > #banner > .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../image/banner/sandwich.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    width: 100%;
+    height: 380px;
+    top: 100px;
+    opacity: 0;
+}
